@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Hash Scanner</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>
+        HashScanner
+       <i class="fa-brands fa-slack"></i>
+    </h1>
+
+    <div class="note">
+      
+       !هذا الموقع لأغراض تعليمية لتوضيح مفهوم Hash في أمن المعلومات
+
+    </div>
+
+   
+    <form onsubmit="event.preventDefault(); checkHash();">
+    <input type="text" id="hashInput" placeholder="# أدخل قيمة الـ Hash">
+    
+    <button onclick="checkHash()">
+        <i class="fa-solid fa-magnifying-glass"></i> Scan
+    </button>
+</form>
+    <div class="loader" id="loader" style="display:none;"></div>
+
+    <div class="result" id="result"></div>
+</div>
+
+<!-- مخصص لعرض النتائج بشكل تفاعلي -->
+<div class="result-table" id="result-table">
+    <!-- سيتم عرض النتيجة هنا -->
+</div>
+
+<script src="JS/script.js"></script>
+</body>
+</html>

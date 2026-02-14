@@ -1,0 +1,159 @@
+/* General Body Styles */
+body {
+    font-family: Arial;
+    background: #243047;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #ffffff;
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;  /* Add space between the container and the table */
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.hash-icon {
+    color: #293752;
+    margin-left: 8px;
+}
+
+.note {
+    font-size: 13px;
+    color: darkred;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #ddd;
+    color: #000;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+button {
+    padding: 10px 25px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    width:120px;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.info {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.loader {
+    display: none;
+    margin: 15px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px dotted #0d6efd;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* General Table Styles */
+.result-table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px; /* Space between container and table */
+    border-collapse: collapse;
+    border-radius: 10px; /* Optional: round corners for a smooth look */
+}
+
+.result-table table {
+    width: 100%;
+    background-color: #1e1e2d; /* Dark background for the table */
+    color: white;
+}
+
+.result-table th, .result-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #444; /* Slight border between rows */
+}
+
+/* Header Styling */
+.result-table th {
+    background-color: #2a2a3d;
+    font-weight: bold;
+}
+
+/* Row Colors (alternating light/dark rows) */
+.result-table tr:nth-child(even) {
+    background-color: #27293d;
+}
+
+.result-table tr:nth-child(odd) {
+    background-color: #2a2a3d;
+}
+
+/* Status Dot (For the classification column, Optional) */
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.green {
+    background-color: #28a745; /* Green for active/online status */
+}
+
+.status-dot.red {
+    background-color: #dc3545; /* Red for inactive/offline status */
+}
+
+.status-dot.yellow {
+    background-color: #ffc107; /* Yellow for warning/inactive status */
+}
+
+/* Additional Styling for Last Column (Optional) */
+.result-table td:last-child {
+    color: #ccc;
+    font-size: 14px;
+}
